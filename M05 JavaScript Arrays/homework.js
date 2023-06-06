@@ -64,8 +64,8 @@ function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
-   if (array.includes(elemento)) return true;
-   else return false;
+   return array.includes(elemento);
+
 }
 
 function agregarNumeros(arrayOfNums) {
@@ -111,15 +111,13 @@ function multiplicarArgumentos() {
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
    if (arguments.length === 0) return 0;
-   if (arguments.length === 1) return arguments[0];
-   if (arguments.length > 1) {
-      var total = 1;
-      for (var i = 0; i < arguments.length; i++) {
-         total *= arguments[i];
-      }
-      return total;
+   var total = 1;
+   for (var i = 0; i < arguments.length; i++) {
+      total *= arguments[i];
    }
+   return total;
 }
+
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
@@ -156,7 +154,7 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   return num.toString()[0] === "9";
+   return num.toString()[0] == 9;
 }
 
 function todosIguales(array) {
@@ -192,6 +190,17 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   var contador = 0;
+   var multiplicacion = [];
+
+   while (contador <= 10) {
+      multiplicacion.push(contador * 6);
+      contador++;
+   }
+
+   return multiplicacion;
+
+
 }
 
 function mayorACien(array) {
@@ -218,7 +227,9 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+
 }
+
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
