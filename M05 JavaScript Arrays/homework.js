@@ -228,7 +228,25 @@ function breakStatement(num) {
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
 
+
+   var newArray = [];
+   var sum = num;
+
+   for (var i = 0; i < 10; i++) {
+      sum += 2;
+      newArray.push(sum);
+
+      if (sum === i) {
+         return "Se interrumpió la ejecución";
+         break;
+      }
+   }
+
+   return newArray;
 }
+
+
+
 
 
 function continueStatement(num) {
@@ -238,7 +256,23 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+
+   var newArray = [];
+   var sum = num;
+
+   for (var i = 0; i < 10; i++) {
+      if (i === 5) {
+         continue;
+      }
+
+      sum += 2;
+      newArray.push(sum);
+   }
+
+   return newArray;
 }
+
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
